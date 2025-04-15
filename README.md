@@ -1,6 +1,6 @@
 # Unique Traders Website
 
-A modern e-commerce website for Unique Traders, the national dealer of RFL doors in Bangladesh.
+A modern e-commerce website for Unique Traders.
 
 ## Features
 - Responsive design for all device sizes
