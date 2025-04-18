@@ -7,7 +7,7 @@ A modern e-commerce website for Unique Traders.
 - Product catalog with categorization.
 - Featured products showcase.
 - Mobile-friendly navigation.
-- Clean, professional design highlighting our premium door offerings
+- Clean, professional design highlighting our premium door offerings.
 
 ## Technologies Used
 - HTML5
