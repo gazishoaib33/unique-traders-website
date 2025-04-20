@@ -3,254 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Traders - Premium Door Solutions</title>
+    <title>RFL Doors - Quality Doors for Your Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="container header-container">
+        <div class="container">
             <div class="logo">
-                <img src="images/logo-placeholder.png" alt="Unique Traders Logo">
-                <h1>Unique <span>Traders</span></h1>
+                <a href="index.html">
+                    <img src="images/logo/rfl-doors-logo.png" alt="RFL Doors Logo">
+                </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/products.html">Products</a></li>
+                    <li><a href="pages/categories.html">Categories</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
                 </ul>
-                <div class="mobile-menu">☰</div>
             </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2>Premium Door Solutions for Every Space</h2>
-            <p>Discover our wide range of high-quality doors designed to enhance security, aesthetics, and functionality for your home or office.</p>
-            <a href="#" class="btn">Explore Collection</a>
+            <div class="hero-content">
+                <h1>Quality Doors for Every Space</h1>
+                <p>Elevate your home with our premium collection of stylish and durable doors</p>
+                <a href="pages/products.html" class="btn btn-primary">Explore Our Collection</a>
+            </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="categories">
+    <section class="featured-categories">
         <div class="container">
-            <div class="section-title">
-                <h2>Door Categories</h2>
-            </div>
+            <h2 class="section-title">Door Categories</h2>
             <div class="category-grid">
                 <div class="category-card">
-                    <div class="category-img">
-                        <img src="images/category-wooden.jpg" alt="Wooden Doors">
-                    </div>
-                    <div class="category-info">
-                        <h3>Wooden Doors</h3>
-                        <p>Classic designs with premium wood materials</p>
-                    </div>
+                    <img src="images/categories/interior-doors.jpg" alt="Interior Doors">
+                    <h3>Interior Doors</h3>
+                    <p>Stylish doors for inside your home</p>
+                    <a href="pages/categories.html#interior" class="btn btn-secondary">View Collection</a>
                 </div>
                 <div class="category-card">
-                    <div class="category-img">
-                        <img src="images/category-upvc.jpg" alt="UPVC Doors">
-                    </div>
-                    <div class="category-info">
-                        <h3>UPVC Doors</h3>
-                        <p>Durable and weather-resistant solutions</p>
-                    </div>
+                    <img src="images/categories/exterior-doors.jpg" alt="Exterior Doors">
+                    <h3>Exterior Doors</h3>
+                    <p>Durable and secure entry doors</p>
+                    <a href="pages/categories.html#exterior" class="btn btn-secondary">View Collection</a>
                 </div>
                 <div class="category-card">
-                    <div class="category-img">
-                        <img src="images/category-security.jpg" alt="Security Doors">
-                    </div>
-                    <div class="category-info">
-                        <h3>Security Doors</h3>
-                        <p>Enhanced protection with modern technology</p>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-img">
-                        <img src="images/category-interior.jpg" alt="Interior Doors">
-                    </div>
-                    <div class="category-info">
-                        <h3>Interior Doors</h3>
-                        <p>Stylish solutions for inside spaces</p>
-                    </div>
+                    <img src="images/categories/sliding-doors.jpg" alt="Sliding Doors">
+                    <h3>Sliding Doors</h3>
+                    <p>Space-saving sliding door solutions</p>
+                    <a href="pages/categories.html#sliding" class="btn btn-secondary">View Collection</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Products Section -->
-    <section class="products">
+    <section class="featured-products">
         <div class="container">
-            <div class="section-title">
-                <h2>Featured Products</h2>
-            </div>
+            <h2 class="section-title">Featured Products</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="images/product-teak.jpg" alt="Premium Teak Door">
-                        <span class="product-badge">Best Seller</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Premium Teak Wood Door</h3>
-                        <div class="product-price">
-                            <span class="old-price">৳15,000</span>
-                            ৳12,500
-                        </div>
-                        <p>Handcrafted teak wood door with elegant design and superior durability.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="product-rating">★★★★★</div>
-                        <button class="cart-btn">View Details</button>
-                    </div>
+                    <img src="images/products/door-1.jpg" alt="Wooden Interior Door">
+                    <h3>Classic Wooden Door</h3>
+                    <p class="price">$299</p>
+                    <a href="pages/products.html#door1" class="btn btn-secondary">View Details</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="images/product-upvc.jpg" alt="UPVC Security Door">
-                        <span class="product-badge">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">UPVC Security Door</h3>
-                        <div class="product-price">৳18,200</div>
-                        <p>Weather-resistant UPVC door with multi-point locking system.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="product-rating">★★★★☆</div>
-                        <button class="cart-btn">View Details</button>
-                    </div>
+                    <img src="images/products/door-2.jpg" alt="Glass Panel Door">
+                    <h3>Modern Glass Panel</h3>
+                    <p class="price">$499</p>
+                    <a href="pages/products.html#door2" class="btn btn-secondary">View Details</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="images/product-interior.jpg" alt="Modern Interior Door">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Modern Interior Door</h3>
-                        <div class="product-price">৳8,900</div>
-                        <p>Contemporary design interior door perfect for modern homes.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="product-rating">★★★★★</div>
-                        <button class="cart-btn">View Details</button>
-                    </div>
+                    <img src="images/products/door-3.jpg" alt="Security Door">
+                    <h3>Security Front Door</h3>
+                    <p class="price">$799</p>
+                    <a href="pages/products.html#door3" class="btn btn-secondary">View Details</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="images/product-steel.jpg" alt="Steel Security Door">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Steel Security Door</h3>
-                        <div class="product-price">
-                            <span class="old-price">৳22,000</span>
-                            ৳19,500
-                        </div>
-                        <p>Heavy-duty steel door with advanced security features.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="product-rating">★★★★☆</div>
-                        <button class="cart-btn">View Details</button>
-                    </div>
+                    <img src="images/products/door-4.jpg" alt="Sliding Barn Door">
+                    <h3>Rustic Barn Door</h3>
+                    <p class="price">$599</p>
+                    <a href="pages/products.html#door4" class="btn btn-secondary">View Details</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <section class="testimonials">
         <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Us</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-icon">✓</div>
-                    <h3>Premium Quality</h3>
-                    <p>All our doors are manufactured using the highest quality materials to ensure longevity and performance.</p>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The quality of RFL doors exceeded my expectations. Installation was smooth and the finish is perfect."</p>
+                    <div class="customer">
+                        <h4>John Smith</h4>
+                        <p>Homeowner</p>
+                    </div>
                 </div>
-                <div class="feature-box">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Enhanced Security</h3>
-                    <p>Advanced locking mechanisms and sturdy construction for superior protection of your property.</p>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"My new front door from RFL has completely transformed the look of my home. Excellent craftsmanship!"</p>
+                    <div class="customer">
+                        <h4>Sarah Johnson</h4>
+                        <p>Interior Designer</p>
+                    </div>
                 </div>
-                <div class="feature-box">
-                    <div class="feature-icon">🛠️</div>
-                    <h3>Professional Installation</h3>
-                    <p>Our skilled technicians ensure perfect fitting and proper functionality of every door.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Energy Efficient</h3>
-                    <p>Weather-sealed designs help maintain indoor temperature and reduce energy costs.</p>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Great selection of doors for our renovation project. The customer service team was very helpful."</p>
+                    <div class="customer">
+                        <h4>Michael Davis</h4>
+                        <p>Contractor</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
     <section class="cta">
         <div class="container">
-            <h2>Need Expert Advice?</h2>
-            <p>Our door specialists are ready to help you choose the perfect doors for your space.</p>
-            <a href="#" class="btn">Contact Us Today</a>
+            <div class="cta-content">
+                <h2>Ready to Find Your Perfect Door?</h2>
+                <p>Our experts are ready to help you choose the best doors for your home or project</p>
+                <a href="pages/contact.html" class="btn btn-primary">Contact Us Today</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>About Unique Traders</h3>
-                    <p>As the national dealer of RFL doors, we provide premium door solutions with exceptional quality and service across Bangladesh.</p>
-                    <ul class="social-links">
-                        <li><a href="#">FB</a></li>
-                        <li><a href="#">IG</a></li>
-                        <li><a href="#">YT</a></li>
-                        <li><a href="#">IN</a></li>
-                    </ul>
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo/rfl-doors-logo.png" alt="RFL Doors Logo" class="footer-logo">
+                    <p>RFL Doors provides high-quality doors for residential and commercial properties, with a focus on craftsmanship, design, and durability.</p>
                 </div>
-                <div class="footer-col">
+                <div class="footer-links">
                     <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/products.html">Products</a></li>
+                        <li><a href="pages/categories.html">Categories</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Categories</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Wooden Doors</a></li>
-                        <li><a href="#">UPVC Doors</a></li>
-                        <li><a href="#">Interior Doors</a></li>
-                        <li><a href="#">Security Doors</a></li>
-                        <li><a href="#">Decorative Doors</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
+                <div class="footer-contact">
                     <h3>Contact Us</h3>
-                    <address>
-                        51/L, Block-D, Road no-04<br>
-                        Bashundhara R/A, Dhaka – 1229
-                    </address>
-                    <div class="contact-info">
-                        <i>📞</i>
-                        <span>+8801865283150</span>
-                    </div>
-                    <div class="contact-info">
-                        <i>✉️</i>
-                        <span>info@uniquetraders.com</span>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Door Street, City, State 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@rfldoors.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Unique Traders. All Rights Reserved. | Designed by Gazi Shoaib</p>
+                <p>&copy; 2025 RFL Doors. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
