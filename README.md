@@ -28,4 +28,4 @@ A modern e-commerce website for Unique Traders.
 - Visualization tool for doors
 
 ---
-Designed and developed by Gazi Shoaib
+Designed and developed by Gazi Shoaib.
