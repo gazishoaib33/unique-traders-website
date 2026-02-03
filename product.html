@@ -3,43 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products - Gazi Traders</title>
-  <link rel="stylesheet" href="../styles.css">
+  <title>Products - Unique Traders</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
     <div class="logo">
-      <img src="../images/logo/logo.png" alt="Gazi Traders Logo">
+      <img src="images/logo/logo.svg" alt="Unique Traders Logo">
     </div>
     <nav class="navbar">
-      <a href="../index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="products.html">Products</a>
+      <a href="product.html">Products</a>
       <a href="categories.html">Categories</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
   </header>
 
-  <main style="padding: 2rem;">
-    <h1>Our Products</h1>
-    <div class="product-grid">
-      <div class="product">
-        <img src="../images/products/door1.jpg" alt="Wooden Door">
-        <p>Classic Wooden Door</p>
+  <main>
+    <section class="product-hero">
+      <div class="container">
+        <p class="eyebrow">Unique Traders Collection</p>
+        <h1>Doors engineered for style, strength, and peace of mind</h1>
+        <p>Explore our curated range of interior, exterior, and specialty doors designed to elevate every space.</p>
       </div>
-      <div class="product">
-        <img src="../images/products/door2.jpg" alt="PVC Door">
-        <p>Modern PVC Bathroom Door</p>
+    </section>
+
+    <section class="product-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Featured Designs</h2>
+            <p>Handpicked RFL doors with premium finishes, trusted hardware, and modern aesthetics.</p>
+          </div>
+          <a href="contact.html" class="btn btn-secondary">Request a Quote</a>
+        </div>
+        <div class="product-grid product-grid--cards">
+          <article class="product-card product-card--detail" id="door1">
+            <img src="images/products/door-1.svg" alt="Classic Wooden Door">
+            <div class="product-card__content">
+              <h3>Classic Wooden Door</h3>
+              <p class="product-card__meta">Solid core • Warm oak finish</p>
+              <ul>
+                <li>Ideal for bedrooms and offices</li>
+                <li>Acoustic and thermal insulation</li>
+                <li>Available in 6 sizes</li>
+              </ul>
+              <div class="product-card__footer">
+                <span class="price">From ৳19,500</span>
+                <a href="contact.html" class="btn btn-primary">Enquire now</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--detail" id="door2">
+            <img src="images/products/door-2.svg" alt="Modern PVC Bathroom Door">
+            <div class="product-card__content">
+              <h3>Modern PVC Bathroom Door</h3>
+              <p class="product-card__meta">Moisture resistant • Matte finish</p>
+              <ul>
+                <li>Lightweight and easy to maintain</li>
+                <li>Scratch and water resistant</li>
+                <li>Fast installation support</li>
+              </ul>
+              <div class="product-card__footer">
+                <span class="price">From ৳12,800</span>
+                <a href="contact.html" class="btn btn-primary">Enquire now</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--detail" id="door3">
+            <img src="images/products/door-3.svg" alt="Premium uPVC Sliding Door">
+            <div class="product-card__content">
+              <h3>Premium uPVC Sliding Door</h3>
+              <p class="product-card__meta">Weatherproof • Smooth glide</p>
+              <ul>
+                <li>Perfect for balconies & patios</li>
+                <li>Multi-point locking system</li>
+                <li>Energy-efficient frames</li>
+              </ul>
+              <div class="product-card__footer">
+                <span class="price">From ৳35,000</span>
+                <a href="contact.html" class="btn btn-primary">Enquire now</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="product">
-        <img src="../images/products/door3.jpg" alt="uPVC Door">
-        <p>Premium uPVC Sliding Door</p>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2025 Gazi Traders | National Dealer of RFL Doors</p>
+    <p>&copy; 2025 Unique Traders | National Dealer of RFL Doors</p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+<svg width="500" height="360" viewBox="0 0 500 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="360" rx="24" fill="#F3F4F6"/>
+  <rect x="150" y="70" width="200" height="220" rx="16" fill="#B45309"/>
+  <rect x="175" y="95" width="150" height="170" rx="12" fill="#D97706"/>
+  <text x="40" y="320" fill="#111827" font-size="18" font-family="Segoe UI, sans-serif" font-weight="600">Interior Collection</text>
+</svg>

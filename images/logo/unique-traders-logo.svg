@@ -1,0 +1,7 @@
+<svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="60" rx="12" fill="#111827"/>
+  <circle cx="30" cy="30" r="20" fill="#B31212"/>
+  <path d="M24 36L30 16L36 36H32.5L30 28.5L27.5 36H24Z" fill="white"/>
+  <text x="60" y="28" fill="white" font-size="18" font-family="Segoe UI, sans-serif" font-weight="700">Unique Traders</text>
+  <text x="60" y="46" fill="#D1D5DB" font-size="10" font-family="Segoe UI, sans-serif" letter-spacing="2">RFL DOORS</text>
+</svg>
