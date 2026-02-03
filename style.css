@@ -1,116 +1,352 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - RFL Doors</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../images/logo/rfl-doors-logo.png" alt="RFL Doors Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
+:root {
+  --primary: #a60000;
+  --primary-dark: #7f0000;
+  --text: #1b1b1b;
+  --muted: #6b6b6b;
+  --light: #f5f5f7;
+  --white: #ffffff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
 
-    <section class="page-banner">
-        <div class="container">
-            <h1>About RFL Doors</h1>
-            <p>Learn about our company, mission, and commitment to quality</p>
-        </div>
-    </section>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    <section class="about-content">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="../images/banners/about-image.jpg" alt="RFL Doors Workshop">
-                </div>
-                <div class="about-text">
-                    <h2>Our Story</h2>
-                    <p>Founded in 2005, RFL Doors has grown from a small family workshop to one of the leading door manufacturers in the region. Our passion for craftsmanship and dedication to quality has driven our growth over the years.</p>
-                    <p>What started as a small operation has expanded into a comprehensive door solutions provider, serving both residential and commercial clients with a wide range of high-quality door products.</p>
-                    <p>Today, we continue to combine traditional craftsmanship with modern manufacturing techniques to deliver doors that are not only beautiful but also durable and functional.</p>
-                </div>
-            </div>
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
 
-            <div class="mission-vision">
-                <div class="mission">
-                    <h2>Our Mission</h2>
-                    <p>To provide exceptional quality doors that enhance the beauty, security, and functionality of any space, while delivering outstanding customer service and maintaining our commitment to sustainable practices.</p>
-                </div>
-                <div class="vision">
-                    <h2>Our Vision</h2>
-                    <p>To be the preferred choice for door solutions, recognized for our commitment to quality, innovation, and customer satisfaction, while continuously evolving to meet the changing needs of our customers.</p>
-                </div>
-            </div>
+img {
+  max-width: 100%;
+  display: block;
+}
 
-            <div class="values">
-                <h2 class="section-title">Our Values</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <i class="fas fa-medal"></i>
-                        <h3>Quality</h3>
-                        <p>We never compromise on the quality of our products. Each door is crafted with attention to detail and built to last.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Innovation</h3>
-                        <p>We continuously explore new designs, materials, and manufacturing techniques to improve our products.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Integrity</h3>
-                        <p>We conduct our business with honesty, transparency, and fairness in all our dealings with customers, suppliers, and employees.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-leaf"></i>
-                        <h3>Sustainability</h3>
-                        <p>We are committed to environmentally responsible practices, from sourcing materials to manufacturing processes.</p>
-                    </div>
-                </div>
-            </div>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-            <div class="team">
-                <h2 class="section-title">Our Leadership Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="../images/team/team-1.jpg" alt="Team Member">
-                        <h3>John Williams</h3>
-                        <p class="position">Founder & CEO</p>
-                        <p>With over 25 years of experience in the industry, John leads our company with vision and expertise.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="../images/team/team-2.jpg" alt="Team Member">
-                        <h3>Sarah Thompson</h3>
-                        <p class="position">Design Director</p>
-                        <p>Sarah brings creativity and innovation to our designs, ensuring our doors are both beautiful and functional.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="../images/team/team-3.jpg" alt="Team Member">
-                        <h3>Michael Chen</h3>
-                        <p class="position">Production Manager</p>
-                        <p>Michael oversees our manufacturing processes, ensuring efficiency without compromising quality.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="../images/team/team-4.jpg" alt="Team Member">
-                        <h3>Lisa Rodriguez</h3>
-                        <p class="position">Customer Relations</p>
-                        <p>Lisa ensures that every customer receives excellent service from first contact through installation an
+.container {
+  width: min(1140px, 90%);
+  margin: 0 auto;
+}
+
+header {
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  font-weight: 600;
+  color: var(--text);
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+.hero {
+  background: linear-gradient(135deg, rgba(166, 0, 0, 0.85), rgba(0, 0, 0, 0.4)),
+    url("images/banners/hero-door.jpg") center/cover no-repeat;
+  color: var(--white);
+  padding: 6rem 0;
+}
+
+.hero-content {
+  max-width: 520px;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--light);
+  color: var(--primary);
+  border: 1px solid rgba(166, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.featured-categories,
+.featured-products,
+.testimonials,
+.about-content,
+.cta {
+  padding: 4rem 0;
+}
+
+.category-grid,
+.product-grid,
+.testimonial-grid,
+.values-grid,
+.team-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.category-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.product-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.testimonial-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.category-card,
+.product-card,
+.testimonial-card,
+.value-card,
+.team-member {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.product-card .price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0.75rem 0;
+}
+
+.testimonial-card p {
+  color: var(--muted);
+  margin: 1rem 0;
+}
+
+.testimonial-card .stars {
+  color: #f5a623;
+}
+
+.cta {
+  background: var(--light);
+}
+
+.cta-content {
+  text-align: center;
+}
+
+.cta-content h2 {
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #0f0f0f;
+  color: var(--white);
+  padding: 3rem 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.footer-logo {
+  width: 160px;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--white);
+}
+
+.footer-contact p {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.page-banner {
+  background: var(--light);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: center;
+}
+
+.mission-vision {
+  display: grid;
+  gap: 2rem;
+  margin: 3rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.values {
+  margin: 3rem 0;
+}
+
+.team-member img {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.site-header,
+.site-footer {
+  background: #0f0f0f;
+  color: var(--white);
+  padding: 1.5rem 2rem;
+}
+
+.site-header .logo img {
+  width: 120px;
+}
+
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: var(--white);
+  font-weight: 600;
+}
+
+main {
+  width: min(1040px, 90%);
+  margin: 0 auto;
+}
+
+.product-grid .product,
+.category-grid .category {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.product-grid .product img,
+.category-grid .category img {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+}
+
+form button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
