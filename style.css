@@ -1,11 +1,13 @@
 :root {
-  --primary: #a60000;
+  --primary: #b31212;
   --primary-dark: #7f0000;
-  --text: #1b1b1b;
-  --muted: #6b6b6b;
-  --light: #f5f5f7;
+  --text: #141414;
+  --muted: #5f5f5f;
+  --light: #f6f5f2;
   --white: #ffffff;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --accent: #0f172a;
 }
 
 * {
@@ -15,7 +17,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.6;
@@ -37,7 +39,8 @@ a {
 }
 
 header {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 0;
@@ -82,24 +85,91 @@ nav a:hover {
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(166, 0, 0, 0.85), rgba(0, 0, 0, 0.4)),
+  background: radial-gradient(circle at top left, rgba(179, 18, 18, 0.2), transparent 55%),
+    linear-gradient(120deg, rgba(18, 18, 18, 0.9), rgba(20, 20, 20, 0.65)),
     url("images/banners/hero-door.jpg") center/cover no-repeat;
   color: var(--white);
   padding: 6rem 0;
 }
 
+.hero-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
 .hero-content {
-  max-width: 520px;
+  max-width: 560px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
-  font-size: 2.75rem;
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
   margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+.hero-highlights h3 {
+  font-size: 1.8rem;
+}
+
+.hero-highlights p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.hero-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-card ul {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-card li::before {
+  content: "•";
+  margin-right: 0.5rem;
+  color: var(--light);
 }
 
 .section-title {
@@ -111,7 +181,7 @@ nav a:hover {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 10px;
   font-weight: 600;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
@@ -122,9 +192,15 @@ nav a:hover {
 }
 
 .btn-secondary {
-  background: var(--light);
+  background: var(--white);
   color: var(--primary);
-  border: 1px solid rgba(166, 0, 0, 0.2);
+  border: 1px solid rgba(179, 18, 18, 0.35);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--white);
 }
 
 .btn:hover {
@@ -135,8 +211,55 @@ nav a:hover {
 .featured-products,
 .testimonials,
 .about-content,
-.cta {
+.cta,
+.benefits {
   padding: 4rem 0;
+}
+
+.trust-bar {
+  background: var(--accent);
+  color: var(--white);
+  padding: 1.25rem 0;
+}
+
+.trust-bar .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trust-bar p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.trust-logos {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.benefits-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+}
+
+.benefits-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.benefit-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .category-grid,
@@ -166,7 +289,7 @@ nav a:hover {
 .value-card,
 .team-member {
   background: var(--white);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 1.5rem;
   box-shadow: var(--shadow);
 }
@@ -188,7 +311,7 @@ nav a:hover {
 }
 
 .cta {
-  background: var(--light);
+  background: linear-gradient(120deg, rgba(179, 18, 18, 0.1), rgba(0, 0, 0, 0.04));
 }
 
 .cta-content {
@@ -346,7 +469,7 @@ form button {
     padding: 4rem 0;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
+  .hero-card {
+    padding: 1.5rem;
   }
 }
