@@ -52,11 +52,19 @@ header .container {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+  position: relative;
 }
 
 .logo img {
   width: 150px;
   height: auto;
+}
+
+.mobile-menu-toggle {
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 
 nav ul {
@@ -87,7 +95,7 @@ nav a:hover {
 .hero {
   background: radial-gradient(circle at top left, rgba(179, 18, 18, 0.2), transparent 55%),
     linear-gradient(120deg, rgba(18, 18, 18, 0.9), rgba(20, 20, 20, 0.65)),
-    url("images/banners/hero-door.jpg") center/cover no-repeat;
+    url("images/banners/hero-door.svg") center/cover no-repeat;
   color: var(--white);
   padding: 6rem 0;
 }
@@ -482,6 +490,10 @@ footer {
   padding: 1.5rem 2rem;
 }
 
+.site-header {
+  position: relative;
+}
+
 .site-header .logo img {
   width: 120px;
 }
@@ -543,6 +555,38 @@ form button {
   .mobile-menu-toggle {
     display: block;
     font-size: 1.5rem;
+  }
+
+  body.nav-open nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 5%;
+    top: 80px;
+    background: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    gap: 1rem;
+    z-index: 20;
+  }
+
+  .site-header .navbar {
+    display: none;
+  }
+
+  body.nav-open .site-header .navbar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1.5rem;
+    top: 90px;
+    background: #111827;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    gap: 1rem;
+    z-index: 20;
   }
 
   .hero {

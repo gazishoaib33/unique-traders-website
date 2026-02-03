@@ -1,0 +1,6 @@
+<svg width="180" height="52" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="52" rx="10" fill="#0F172A"/>
+  <rect x="12" y="10" width="32" height="32" rx="8" fill="#B31212"/>
+  <path d="M22 34V18H26L30 24L34 18H38V34H34V24.5L30 30L26 24.5V34H22Z" fill="white"/>
+  <text x="54" y="32" fill="white" font-size="16" font-family="Segoe UI, sans-serif" font-weight="600">Unique Traders</text>
+</svg>

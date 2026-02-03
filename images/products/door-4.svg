@@ -1,0 +1,7 @@
+<svg width="600" height="420" viewBox="0 0 600 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="420" rx="24" fill="#FEF3C7"/>
+  <rect x="160" y="80" width="280" height="260" rx="24" fill="#92400E"/>
+  <rect x="190" y="110" width="220" height="200" rx="18" fill="#B45309"/>
+  <circle cx="380" cy="210" r="10" fill="#FDE68A"/>
+  <text x="40" y="380" fill="#111827" font-size="20" font-family="Segoe UI, sans-serif" font-weight="600">Rustic Barn Door</text>
+</svg>

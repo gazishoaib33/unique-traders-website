@@ -1,0 +1,13 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" fill="#111827"/>
+  <rect x="80" y="80" width="1040" height="540" rx="32" fill="#1F2937"/>
+  <rect x="160" y="150" width="420" height="420" rx="24" fill="#0F172A" stroke="#B31212" stroke-width="6"/>
+  <rect x="200" y="190" width="340" height="340" rx="20" fill="#111827"/>
+  <circle cx="520" cy="360" r="12" fill="#B31212"/>
+  <rect x="640" y="210" width="340" height="70" rx="12" fill="#B31212"/>
+  <rect x="640" y="310" width="300" height="16" rx="8" fill="#E5E7EB"/>
+  <rect x="640" y="350" width="260" height="16" rx="8" fill="#E5E7EB"/>
+  <rect x="640" y="390" width="320" height="16" rx="8" fill="#E5E7EB"/>
+  <rect x="640" y="450" width="220" height="44" rx="10" fill="#0F172A" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="660" y="478" fill="#E5E7EB" font-size="16" font-family="Segoe UI, sans-serif">Modern Entry Doors</text>
+</svg>
