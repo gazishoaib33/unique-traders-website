@@ -602,3 +602,54 @@ form button {
     align-items: flex-start;
   }
 }
+
+.navbar a.active {
+  color: #fca5a5;
+  text-decoration: underline;
+  text-underline-offset: 0.35rem;
+}
+
+.interactive-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.interactive-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.category-grid .category,
+.product-card--detail {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.category-grid .category:hover,
+.product-card--detail:hover {
+  transform: translateY(-5px);
+}
+
+.category-grid .category:focus-visible,
+.product-card--detail:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.category-grid .category.selected,
+.product-card--detail.is-highlighted {
+  border-color: rgba(179, 18, 18, 0.55);
+  box-shadow: 0 14px 30px rgba(179, 18, 18, 0.2);
+  transform: translateY(-6px);
+}
+
+.btn-inline-toggle {
+  margin-top: 1rem;
+}
+
+.form-confirmation {
+  margin-top: 1rem;
+  color: #166534;
+  font-weight: 600;
+}
