@@ -703,15 +703,21 @@ main {
   margin-top: 1.75rem;
 }
 
-.map-placeholder {
-  background: var(--bg-alt);
+.map-embed {
   border: 1px solid var(--border);
-  padding: 2.25rem 1.75rem;
-  text-align: left;
-  color: var(--muted);
+  line-height: 0;
+  overflow: hidden;
 }
 
-.map-placeholder .btn {
+.map-embed iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+  filter: grayscale(0.15) contrast(1.02);
+}
+
+.map-directions {
   margin-top: 1.25rem;
 }
 
