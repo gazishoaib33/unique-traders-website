@@ -3,35 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Unique Traders</title>
+  <title>আমাদের সম্পর্কে — Unique Traders</title>
+  <meta name="description" content="ইউনিক ট্রেডার্স টাঙ্গাইলে দরজা ও নির্মাণসামগ্রীর ব্যবসা করে আসছে। আমরা আরএফএল-এর অনুমোদিত ডিলার।">
+  <meta property="og:title" content="আমাদের সম্পর্কে — Unique Traders">
+  <meta property="og:description" content="ইউনিক ট্রেডার্স টাঙ্গাইলে দরজা ও নির্মাণসামগ্রীর ব্যবসা করে আসছে। আমরা আরএফএল-এর অনুমোদিত ডিলার।">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="bn_BD">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="logo">
-      <img src="images/logo/logo.svg" alt="Unique Traders Logo">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo/unique-traders-logo.svg" alt="Unique Traders"></a>
+      </div>
+      <nav class="navbar">
+        <a href="index.html">হোম <span class="nav-en">Home</span></a>
+        <a href="categories.html">ক্যাটাগরি <span class="nav-en">Categories</span></a>
+        <a href="product.html">পণ্য <span class="nav-en">Products</span></a>
+        <a href="about.html" class="active">আমাদের সম্পর্কে <span class="nav-en">About</span></a>
+        <a href="contact.html">যোগাযোগ <span class="nav-en">Contact</span></a>
+      </nav>
+      <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="product.html">Products</a>
-      <a href="categories.html">Categories</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
   </header>
 
-  <main style="padding: 2rem;">
-    <h1>About Unique Traders</h1>
-    <p>We are proud to be the national dealer of RFL Doors in Bangladesh. Our mission is to bring you premium-quality doors that are strong, stylish, and secure. With decades of business heritage and a commitment to excellence, we aim to serve households and businesses with products they can trust.</p>
-  </main>
+  <section class="page-banner">
+    <div class="container">
+      <h1>আমাদের সম্পর্কে</h1>
+    </div>
+  </section>
 
+  <main>
+    <div class="container about-content">
+      <p>ইউনিক ট্রেডার্স টাঙ্গাইলে দরজা ও নির্মাণসামগ্রীর ব্যবসা করে আসছে। আমরা আরএফএল-এর অনুমোদিত ডিলার — কসমিক, ডি-লাইট, ইকো ও উডি সহ পিভিসি ও ইউপিভিসি দরজার সংগ্রহ আমাদের শোরুমে মজুদ থাকে।</p>
+      <p>দরজার পাশাপাশি অ্যালুমিনিয়াম গ্লাস ডোর, ফ্রেম, হার্ডওয়্যার ও আনুষঙ্গিক সামগ্রীও আমাদের কাছে পাওয়া যায়।</p>
+      <p>বাড়ির মালিক, ঠিকাদার ও অন্যান্য দোকানদার — সবার জন্যই আমরা কাজ করি। পাইকারি দামের জন্য সরাসরি যোগাযোগ করুন।</p>
+      <p class="about-en">Unique Traders supplies doors and building materials in Tangail. We are an authorised dealer of RFL doors, keeping the PVC and uPVC range in stock at our showroom, alongside aluminium glass doors, frames, hardware and fittings. We serve homeowners, contractors and other retailers. Contact us directly for wholesale rates.</p>
+      <p class="note">প্রতিষ্ঠার সাল ও দোকানের ছবি এখানে যোগ করতে হবে।</p>
+      <a href="contact.html" class="btn btn-primary">যোগাযোগ করুন</a>
+    </div>
+  </main>
   <footer class="site-footer">
-    <p>&copy; 2025 Unique Traders | National Dealer of RFL Doors</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="images/logo/unique-traders-logo.svg" alt="Unique Traders" class="footer-logo">
+          <p>ইউনিক ট্রেডার্স — আরএফএল দরজার অনুমোদিত ডিলার। টাঙ্গাইল থেকে সারা দেশে খুচরা ও পাইকারি সরবরাহ।</p>
+          <p class="footer-en">Authorised dealer of RFL doors. Retail and wholesale supply from Tangail.</p>
+        </div>
+        <div class="footer-links">
+          <h3>লিংক</h3>
+          <ul>
+            <li><a href="index.html">হোম</a></li>
+            <li><a href="categories.html">ক্যাটাগরি</a></li>
+            <li><a href="product.html">পণ্য</a></li>
+            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>যোগাযোগ</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 51/L, Block-D, Road no-04, Tangail 1900</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+8801865283150">+8801865283150</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:gazishoaib953@gmail.com">gazishoaib953@gmail.com</a></p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/8801865283150" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Unique Traders. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <a class="wa-float" href="https://wa.me/8801865283150" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <script src="main.js"></script>
 </body>

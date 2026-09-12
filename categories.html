@@ -3,48 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Categories - Unique Traders</title>
+  <title>ক্যাটাগরি — Unique Traders</title>
+  <meta name="description" content="ইউনিক ট্রেডার্সের দরজার ক্যাটাগরি — কসমিক, ডি-লাইট, ইকো, উডি, অ্যালুমিনিয়াম গ্লাস ডোর, ফ্রেম ও হার্ডওয়্যার।">
+  <meta property="og:title" content="ক্যাটাগরি — Unique Traders">
+  <meta property="og:description" content="ইউনিক ট্রেডার্সের দরজার ক্যাটাগরি — কসমিক, ডি-লাইট, ইকো, উডি, অ্যালুমিনিয়াম গ্লাস ডোর, ফ্রেম ও হার্ডওয়্যার।">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="bn_BD">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="logo">
-      <img src="images/logo/logo.svg" alt="Unique Traders Logo">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo/unique-traders-logo.svg" alt="Unique Traders"></a>
+      </div>
+      <nav class="navbar">
+        <a href="index.html">হোম <span class="nav-en">Home</span></a>
+        <a href="categories.html" class="active">ক্যাটাগরি <span class="nav-en">Categories</span></a>
+        <a href="product.html">পণ্য <span class="nav-en">Products</span></a>
+        <a href="about.html">আমাদের সম্পর্কে <span class="nav-en">About</span></a>
+        <a href="contact.html">যোগাযোগ <span class="nav-en">Contact</span></a>
+      </nav>
+      <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="product.html">Products</a>
-      <a href="categories.html">Categories</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
   </header>
 
-  <main style="padding: 2rem;">
-    <h1>Product Categories</h1>
-    <div class="category-grid">
-      <div class="category">
-        <img src="images/categories/pvc.svg" alt="PVC Doors">
-        <h3>PVC Doors</h3>
+  <section class="page-banner">
+    <div class="container">
+      <h1>ক্যাটাগরি</h1>
+      <p>আমাদের শোরুমে যেসব ধরনের দরজা ও সামগ্রী পাওয়া যায়।</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <div class="category-grid">
+        <div class="category-card" id="cosmic">
+          <img src="images/categories/pvc.svg" alt="Cosmic Door">
+          <h3>কসমিক ডোর</h3>
+          <p class="cat-en">Cosmic Door</p>
+          <p>পিভিসি দরজা, বিভিন্ন ডিজাইন ও রঙে</p>
+          <a href="https://wa.me/8801865283150?text=আমি%20Cosmic%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+        </div>
+        <div class="category-card" id="dlight">
+          <img src="images/categories/upvc.svg" alt="D-Light Door">
+          <h3>ডি-লাইট ডোর</h3>
+          <p class="cat-en">D-Light Door</p>
+          <p>হালকা ও টেকসই পিভিসি দরজা</p>
+          <a href="https://wa.me/8801865283150?text=আমি%20D-Light%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+        </div>
+        <div class="category-card" id="eco">
+          <img src="images/categories/wooden.svg" alt="Eco and Woody">
+          <h3>ইকো ও উডি</h3>
+          <p class="cat-en">Eco and Woody</p>
+          <p>সাশ্রয়ী দামে পিভিসি দরজা</p>
+          <a href="https://wa.me/8801865283150?text=আমি%20Eco%20and%20Woody%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+        </div>
+        <div class="category-card" id="aluminium">
+          <img src="images/categories/sliding-doors.svg" alt="Aluminium Glass Door">
+          <h3>অ্যালুমিনিয়াম গ্লাস ডোর</h3>
+          <p class="cat-en">Aluminium Glass Door</p>
+          <p>অফিস ও বাথরুমের জন্য</p>
+          <a href="https://wa.me/8801865283150?text=আমি%20Aluminium%20Glass%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+        </div>
+        <div class="category-card" id="frames">
+          <img src="images/categories/interior-doors.svg" alt="Door Frames">
+          <h3>ফ্রেম</h3>
+          <p class="cat-en">Door Frames</p>
+          <p>পিভিসি ও কাঠের ফ্রেম</p>
+          <a href="https://wa.me/8801865283150?text=আমি%20Door%20Frames%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+        </div>
+        <div class="category-card" id="hardware">
+          <img src="images/categories/exterior-doors.svg" alt="Hardware and Fittings">
+          <h3>হার্ডওয়্যার</h3>
+          <p class="cat-en">Hardware and Fittings</p>
+          <p>হ্যান্ডেল, লক, হিঞ্জ</p>
+          <a href="https://wa.me/8801865283150?text=আমি%20Hardware%20and%20Fittings%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+        </div>
       </div>
-      <div class="category">
-        <img src="images/categories/wooden.svg" alt="Wooden Doors">
-        <h3>Wooden Doors</h3>
-      </div>
-      <div class="category">
-        <img src="images/categories/upvc.svg" alt="uPVC Doors">
-        <h3>uPVC Doors</h3>
-      </div>
+      <p class="note">দাম মাপ, রঙ ও পরিমাণের উপর নির্ভর করে। সঠিক দর জানতে ফোন বা হোয়াটসঅ্যাপে যোগাযোগ করুন।</p>
     </div>
   </main>
-
   <footer class="site-footer">
-    <p>&copy; 2025 Unique Traders | National Dealer of RFL Doors</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="images/logo/unique-traders-logo.svg" alt="Unique Traders" class="footer-logo">
+          <p>ইউনিক ট্রেডার্স — আরএফএল দরজার অনুমোদিত ডিলার। টাঙ্গাইল থেকে সারা দেশে খুচরা ও পাইকারি সরবরাহ।</p>
+          <p class="footer-en">Authorised dealer of RFL doors. Retail and wholesale supply from Tangail.</p>
+        </div>
+        <div class="footer-links">
+          <h3>লিংক</h3>
+          <ul>
+            <li><a href="index.html">হোম</a></li>
+            <li><a href="categories.html">ক্যাটাগরি</a></li>
+            <li><a href="product.html">পণ্য</a></li>
+            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>যোগাযোগ</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 51/L, Block-D, Road no-04, Tangail 1900</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+8801865283150">+8801865283150</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:gazishoaib953@gmail.com">gazishoaib953@gmail.com</a></p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/8801865283150" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Unique Traders. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <a class="wa-float" href="https://wa.me/8801865283150" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <script src="main.js"></script>
 </body>
