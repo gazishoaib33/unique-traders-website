@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gazishoaib33.github.io/unique-traders-website/sitemap.xml

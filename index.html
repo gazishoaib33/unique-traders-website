@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('uniqueTradersTheme');
+        var wantsDark = stored ? stored === 'dark' : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (wantsDark) document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) {}
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unique Traders — আরএফএল দরজার ডিলার, টাঙ্গাইল</title>
   <meta name="description" content="ইউনিক ট্রেডার্স, টাঙ্গাইল — আরএফএল অনুমোদিত ডিলার। কসমিক, ডি-লাইট, ইকো ও উডি পিভিসি দরজা, অ্যালুমিনিয়াম গ্লাস ডোর, ফ্রেম ও হার্ডওয়্যার। খুচরা ও পাইকারি।">
+  <link rel="canonical" href="https://gazishoaib33.github.io/unique-traders-website/index.html">
+  <meta name="theme-color" content="#0f0f0f">
   <meta property="og:title" content="Unique Traders — আরএফএল দরজার ডিলার, টাঙ্গাইল">
   <meta property="og:description" content="ইউনিক ট্রেডার্স, টাঙ্গাইল — আরএফএল অনুমোদিত ডিলার। কসমিক, ডি-লাইট, ইকো ও উডি পিভিসি দরজা, অ্যালুমিনিয়াম গ্লাস ডোর, ফ্রেম ও হার্ডওয়্যার। খুচরা ও পাইকারি।">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="bn_BD">
+  <meta property="og:url" content="https://gazishoaib33.github.io/unique-traders-website/index.html">
+  <meta property="og:image" content="https://gazishoaib33.github.io/unique-traders-website/images/logo/unique-traders-logo.svg">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="images/logo/unique-traders-logo.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
@@ -33,18 +48,26 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <a href="index.html"><img src="images/logo/unique-traders-logo.svg" alt="Unique Traders"></a>
+        <a href="index.html"><img src="images/logo/unique-traders-logo.svg" alt="Unique Traders" width="220" height="60"></a>
       </div>
       <nav class="navbar">
-        <a href="index.html" class="active">হোম <span class="nav-en">Home</span></a>
-        <a href="categories.html">ক্যাটাগরি <span class="nav-en">Categories</span></a>
-        <a href="product.html">পণ্য <span class="nav-en">Products</span></a>
-        <a href="about.html">আমাদের সম্পর্কে <span class="nav-en">About</span></a>
-        <a href="contact.html">যোগাযোগ <span class="nav-en">Contact</span></a>
+        <a href="index.html" class="active">হোম <span class="nav-en" lang="en">Home</span></a>
+        <a href="categories.html">ক্যাটাগরি <span class="nav-en" lang="en">Categories</span></a>
+        <a href="product.html">পণ্য <span class="nav-en" lang="en">Products</span></a>
+        <a href="about.html">আমাদের সম্পর্কে <span class="nav-en" lang="en">About</span></a>
+        <a href="contact.html">যোগাযোগ <span class="nav-en" lang="en">Contact</span></a>
       </nav>
-      <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" data-open-enquiry aria-haspopup="dialog" aria-controls="enquiry-dialog" aria-label="দ্রুত জিজ্ঞাসা করুন">
+          <i class="fas fa-comment-dots" aria-hidden="true"></i>
+        </button>
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="থিম পরিবর্তন করুন">
+          <i id="theme-icon" class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -55,10 +78,11 @@
           <p class="eyebrow">আরএফএল অনুমোদিত ডিলার</p>
           <h1>দরজার সম্পূর্ণ সংগ্রহ, এক জায়গায়</h1>
           <p>কসমিক, ডি-লাইট, ইকো ও উডি — পিভিসি ও ইউপিভিসি দরজা। টাঙ্গাইলের শোরুমে সরাসরি দেখুন, অথবা ফোনে অর্ডার করুন। খুচরা ও পাইকারি দুইভাবেই।</p>
-          <p class="hero-en">The full RFL door range. Retail and wholesale, from our Tangail showroom.</p>
+          <p class="hero-en" lang="en">The full RFL door range. Retail and wholesale, from our Tangail showroom.</p>
           <div class="hero-actions">
-            <a href="tel:+8801865283150" class="btn btn-primary"><i class="fas fa-phone"></i> ফোন করুন</a>
-            <a href="https://wa.me/8801865283150" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> হোয়াটসঅ্যাপ</a>
+            <a href="tel:+8801865283150" class="btn btn-primary"><i class="fas fa-phone" aria-hidden="true"></i> ফোন করুন</a>
+            <a href="https://wa.me/8801865283150" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> হোয়াটসঅ্যাপ</a>
+            <button type="button" class="btn btn-ghost" data-open-enquiry aria-haspopup="dialog" aria-controls="enquiry-dialog"><i class="fas fa-comment-dots" aria-hidden="true"></i> দ্রুত জিজ্ঞাসা</button>
           </div>
         </div>
         <div class="hero-card">
@@ -80,49 +104,49 @@
       <h2 class="section-title">ক্যাটাগরি</h2>
       <div class="category-grid">
         <div class="category-card" id="cosmic">
-          <img src="images/categories/pvc.svg" alt="Cosmic Door">
+          <img src="images/categories/pvc.svg" alt="Cosmic Door" width="500" height="360" loading="lazy">
           <h3>কসমিক ডোর</h3>
-          <p class="cat-en">Cosmic Door</p>
+          <p class="cat-en" lang="en">Cosmic Door</p>
           <p>পিভিসি দরজা, বিভিন্ন ডিজাইন ও রঙে</p>
-          <a href="https://wa.me/8801865283150?text=আমি%20Cosmic%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+          <a href="https://wa.me/8801865283150?text=আমি%20Cosmic%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary" target="_blank" rel="noopener">দাম জানুন</a>
         </div>
         <div class="category-card" id="dlight">
-          <img src="images/categories/upvc.svg" alt="D-Light Door">
+          <img src="images/categories/upvc.svg" alt="D-Light Door" width="500" height="360" loading="lazy">
           <h3>ডি-লাইট ডোর</h3>
-          <p class="cat-en">D-Light Door</p>
+          <p class="cat-en" lang="en">D-Light Door</p>
           <p>হালকা ও টেকসই পিভিসি দরজা</p>
-          <a href="https://wa.me/8801865283150?text=আমি%20D-Light%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+          <a href="https://wa.me/8801865283150?text=আমি%20D-Light%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary" target="_blank" rel="noopener">দাম জানুন</a>
         </div>
         <div class="category-card" id="eco">
-          <img src="images/categories/wooden.svg" alt="Eco and Woody">
+          <img src="images/categories/wooden.svg" alt="Eco and Woody" width="500" height="360" loading="lazy">
           <h3>ইকো ও উডি</h3>
-          <p class="cat-en">Eco and Woody</p>
+          <p class="cat-en" lang="en">Eco and Woody</p>
           <p>সাশ্রয়ী দামে পিভিসি দরজা</p>
-          <a href="https://wa.me/8801865283150?text=আমি%20Eco%20and%20Woody%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+          <a href="https://wa.me/8801865283150?text=আমি%20Eco%20and%20Woody%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary" target="_blank" rel="noopener">দাম জানুন</a>
         </div>
         <div class="category-card" id="aluminium">
-          <img src="images/categories/sliding-doors.svg" alt="Aluminium Glass Door">
+          <img src="images/categories/sliding-doors.svg" alt="Aluminium Glass Door" width="500" height="360" loading="lazy">
           <h3>অ্যালুমিনিয়াম গ্লাস ডোর</h3>
-          <p class="cat-en">Aluminium Glass Door</p>
+          <p class="cat-en" lang="en">Aluminium Glass Door</p>
           <p>অফিস ও বাথরুমের জন্য</p>
-          <a href="https://wa.me/8801865283150?text=আমি%20Aluminium%20Glass%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+          <a href="https://wa.me/8801865283150?text=আমি%20Aluminium%20Glass%20Door%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary" target="_blank" rel="noopener">দাম জানুন</a>
         </div>
         <div class="category-card" id="frames">
-          <img src="images/categories/interior-doors.svg" alt="Door Frames">
+          <img src="images/categories/interior-doors.svg" alt="Door Frames" width="500" height="360" loading="lazy">
           <h3>ফ্রেম</h3>
-          <p class="cat-en">Door Frames</p>
+          <p class="cat-en" lang="en">Door Frames</p>
           <p>পিভিসি ও কাঠের ফ্রেম</p>
-          <a href="https://wa.me/8801865283150?text=আমি%20Door%20Frames%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+          <a href="https://wa.me/8801865283150?text=আমি%20Door%20Frames%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary" target="_blank" rel="noopener">দাম জানুন</a>
         </div>
         <div class="category-card" id="hardware">
-          <img src="images/categories/exterior-doors.svg" alt="Hardware and Fittings">
+          <img src="images/categories/exterior-doors.svg" alt="Hardware and Fittings" width="500" height="360" loading="lazy">
           <h3>হার্ডওয়্যার</h3>
-          <p class="cat-en">Hardware and Fittings</p>
+          <p class="cat-en" lang="en">Hardware and Fittings</p>
           <p>হ্যান্ডেল, লক, হিঞ্জ</p>
-          <a href="https://wa.me/8801865283150?text=আমি%20Hardware%20and%20Fittings%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary">দাম জানুন</a>
+          <a href="https://wa.me/8801865283150?text=আমি%20Hardware%20and%20Fittings%20সম্পর্কে%20জানতে%20চাই" class="btn btn-secondary" target="_blank" rel="noopener">দাম জানুন</a>
         </div>
       </div>
-      <p class="section-more"><a href="categories.html">সব ক্যাটাগরি দেখুন <i class="fas fa-arrow-right"></i></a></p>
+      <p class="section-more"><a href="categories.html">সব ক্যাটাগরি দেখুন <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
     </div>
   </section>
 
@@ -136,6 +160,7 @@
         <div class="benefit-card">
           <h3>সঠিক মাপ</h3>
           <p>দরজার পাতা ও ফ্রেমের মাপ মিলিয়ে নিন — ভুল মাপে অর্ডার এড়াতে আমরা পরামর্শ দিই।</p>
+          <a href="categories.html#measure-guide" class="card-link">মাপ নেওয়ার নিয়ম দেখুন <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
         <div class="benefit-card">
           <h3>শোরুমে দেখুন</h3>
@@ -162,9 +187,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <img src="images/logo/unique-traders-logo.svg" alt="Unique Traders" class="footer-logo">
+          <img src="images/logo/unique-traders-logo.svg" alt="Unique Traders" class="footer-logo" width="220" height="60" loading="lazy">
           <p>ইউনিক ট্রেডার্স — আরএফএল দরজার অনুমোদিত ডিলার। টাঙ্গাইল থেকে সারা দেশে খুচরা ও পাইকারি সরবরাহ।</p>
-          <p class="footer-en">Authorised dealer of RFL doors. Retail and wholesale supply from Tangail.</p>
+          <p class="footer-en" lang="en">Authorised dealer of RFL doors. Retail and wholesale supply from Tangail.</p>
         </div>
         <div class="footer-links">
           <h3>লিংক</h3>
@@ -178,24 +203,69 @@
         </div>
         <div class="footer-contact">
           <h3>যোগাযোগ</h3>
-          <p><i class="fas fa-map-marker-alt"></i> 51/L, Block-D, Road no-04, Tangail 1900</p>
-          <p><i class="fas fa-phone"></i> <a href="tel:+8801865283150">+8801865283150</a></p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:gazishoaib953@gmail.com">gazishoaib953@gmail.com</a></p>
+          <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 51/L, Block-D, Road no-04, Tangail 1900</p>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+8801865283150">+8801865283150</a></p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:gazishoaib953@gmail.com">gazishoaib953@gmail.com</a></p>
           <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/8801865283150" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/8801865283150" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Unique Traders. All rights reserved.</p>
+        <p>&copy; <span id="year">2026</span> Unique Traders. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <a class="wa-float" href="https://wa.me/8801865283150" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+  <a class="wa-float" href="https://wa.me/8801865283150" aria-label="WhatsApp" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="উপরে যান" hidden>
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="enquiry-dialog" class="enquiry-dialog">
+    <form method="dialog" class="enquiry-form" id="enquiry-form">
+      <div class="enquiry-header">
+        <h2>দ্রুত জিজ্ঞাসা <span class="hero-en" lang="en">Quick Enquiry</span></h2>
+        <button type="button" class="icon-btn enquiry-close" aria-label="বন্ধ করুন"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+      </div>
+      <p class="enquiry-note">তথ্য দিয়ে নিচের বোতামে চাপুন — হোয়াটসঅ্যাপ খুলে বার্তাটি প্রস্তুত থাকবে, আপনি শুধু পাঠাবেন।</p>
+      <label>নাম (ঐচ্ছিক)
+        <input type="text" name="name" autocomplete="name" placeholder="আপনার নাম">
+      </label>
+      <label>ফোন নম্বর (ঐচ্ছিক)
+        <input type="tel" name="phone" autocomplete="tel" placeholder="যোগাযোগের নম্বর">
+      </label>
+      <label>ক্যাটাগরি
+        <select name="category">
+          <option value="কসমিক ডোর">কসমিক ডোর — Cosmic Door</option>
+          <option value="ডি-লাইট ডোর">ডি-লাইট ডোর — D-Light Door</option>
+          <option value="ইকো ও উডি">ইকো ও উডি — Eco and Woody</option>
+          <option value="অ্যালুমিনিয়াম গ্লাস ডোর">অ্যালুমিনিয়াম গ্লাস ডোর — Aluminium Glass Door</option>
+          <option value="ফ্রেম">ফ্রেম — Door Frames</option>
+          <option value="হার্ডওয়্যার">হার্ডওয়্যার — Hardware</option>
+          <option value="অন্যান্য">অন্যান্য — Other</option>
+        </select>
+      </label>
+      <div class="enquiry-row">
+        <label>ধরন
+          <select name="type">
+            <option value="খুচরা">খুচরা — Retail</option>
+            <option value="পাইকারি">পাইকারি — Wholesale</option>
+          </select>
+        </label>
+        <label>পরিমাণ
+          <input type="number" name="quantity" min="1" value="1" inputmode="numeric">
+        </label>
+      </div>
+      <label>মাপ বা বিস্তারিত (ঐচ্ছিক)
+        <textarea name="note" rows="3" placeholder="যেমনঃ ৭ ফুট × ৩ ফুট, রঙ পছন্দ ইত্যাদি"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary enquiry-submit"><i class="fab fa-whatsapp" aria-hidden="true"></i> হোয়াটসঅ্যাপে পাঠান</button>
+    </form>
+  </dialog>
 
   <script src="main.js"></script>
 </body>
