@@ -9,7 +9,7 @@ Retail and wholesale.
 - `categories.html` — door categories, category search, and a door-measurement guide
 - `product.html` — sample products
 - `about.html` — about the shop
-- `contact.html` — address, phone, WhatsApp, and a Google Maps directions link
+- `contact.html` — address, phone, WhatsApp, and an embedded Google Map
 
 Static HTML, CSS and vanilla JavaScript. Deployed to GitHub Pages
 via `.github/workflows/jekyll-gh-pages.yml`.
@@ -26,6 +26,8 @@ Bangla is the primary language (`<html lang="bn">`); English appears as a second
 - Category search/filter on the categories page
 - Door-measurement guide (`categories.html#measure-guide`)
 - Copy-to-clipboard for the phone number and address on the contact page
+- Embedded Google Map + directions link on the contact page, pointed at the shop's real
+  Google Maps listing ("RFL Exclusive Showroom Unique Traders")
 - `robots.txt` / `sitemap.xml`, canonical URLs, Open Graph tags, and JSON-LD business data for SEO
 
 ## Still to do (needs the shop owner's input — not guessed by this pass)
@@ -34,8 +36,6 @@ Bangla is the primary language (`<html lang="bn">`); English appears as a second
   and swap the SVG `og:image` for a real JPG/PNG once available
 - Add the year the shop was established (`about.html`)
 - Add opening hours (`contact.html`)
-- Create a Google Business Profile, then paste the real Maps embed into `contact.html`
-  (a plain "get directions" search link is already in place as an interim)
 - Confirm the dealer wording with RFL before publishing
 - Decide whether to publish MRP per product, or keep "contact for price"
 - Add a shop email address in place of the personal one
