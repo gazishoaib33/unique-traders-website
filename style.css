@@ -184,7 +184,59 @@ main {
   color: inherit;
   cursor: pointer;
   display: none;
-  font-size: 1.4rem;
+  /* A fixed 44px tap target with a CSS-drawn icon, so the menu can always be
+     opened even if the icon font (Font Awesome CDN) is slow or blocked. */
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  position: relative;
+}
+
+.menu-bars,
+.menu-bars::before,
+.menu-bars::after {
+  position: absolute;
+  left: 50%;
+  width: 22px;
+  height: 2px;
+  margin-left: -11px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-bars {
+  top: 50%;
+  margin-top: -1px;
+}
+
+.menu-bars::before,
+.menu-bars::after {
+  content: "";
+  left: 0;
+  margin-left: 0;
+}
+
+.menu-bars::before {
+  top: -7px;
+}
+
+.menu-bars::after {
+  top: 7px;
+}
+
+body.nav-open .menu-bars {
+  background: transparent;
+}
+
+body.nav-open .menu-bars::before {
+  transform: translateY(7px) rotate(45deg);
+  background: currentColor;
+}
+
+body.nav-open .menu-bars::after {
+  transform: translateY(-7px) rotate(-45deg);
+  background: currentColor;
 }
 
 /* -------------------- Buttons -------------------- */
@@ -1098,7 +1150,62 @@ form select:focus {
 
 @media (max-width: 768px) {
   .mobile-menu-toggle {
+    display: inline-block;
+  }
+
+  /* Comfortable tap targets (~44px) on phones and tablets. */
+  .icon-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .copy-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .contact-details a,
+  .benefit-card .card-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .social-icons a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .site-header .navbar a {
     display: block;
+    padding: 0.55rem 0;
+  }
+
+  #category-search {
+    min-height: 44px;
+  }
+
+  /* Category cards: two per row with a shorter image, instead of six
+     full-width cards each almost a screen tall. */
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .category-card,
+  .product-card {
+    padding: 1.1rem;
+  }
+
+  .category-card img,
+  .product-grid > .product-card img {
+    max-height: 110px;
+    margin-bottom: 0.75rem;
   }
 
   .site-header .navbar {
@@ -1132,6 +1239,13 @@ form select:focus {
   }
 
   .enquiry-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Very small phones (e.g. 320px): one category per row again. */
+@media (max-width: 359px) {
+  .category-grid {
     grid-template-columns: 1fr;
   }
 }
