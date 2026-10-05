@@ -7,7 +7,7 @@ Retail and wholesale.
 
 - `index.html` — home, category grid, contact
 - `categories.html` — door categories, category search, and a door-measurement guide
-- `product.html` — sample products
+- `product.html` — the full public product catalogue (search, categories, "ask for price" on WhatsApp)
 - `about.html` — about the shop
 - `contact.html` — address, phone, WhatsApp, and an embedded Google Map
 
@@ -16,6 +16,36 @@ via `.github/workflows/jekyll-gh-pages.yml`.
 
 Bangla is the primary language (`<html lang="bn">`); English appears as a secondary line
 (marked `lang="en"` for screen readers).
+
+## Public catalogue (no prices)
+
+`product.html` lists every product from the shop's catalogue — name, size,
+category, Left/Right variants, product code and photo. Prices are never
+shown: each product has a **দাম জানুন** button that opens WhatsApp with a
+ready-made message containing the product name, size, chosen variant and
+code. A "পরামর্শ চাই" button asks for advice on size/budget.
+
+The list comes from `catalog-data.js` (+ photos in
+`images/products/catalog/`), generated from the inventory app's catalogue:
+
+```bash
+# from this repo, with gazishoaib33/unique-traders checked out next to it
+node tools/build-public-catalog.js ../unique-traders
+```
+
+The generator copies **only public fields** (name, code, category, brand,
+size, variant names, photo) — never cost price, selling price, stock or
+barcodes — and shrinks photos to web size (needs ImageMagick). Re-run it when
+the catalogue changes; products added only inside the inventory app's
+browser storage are not included.
+
+## Admin / Staff login
+
+Every page has a **লগইন (Admin / Staff)** link in the menu that opens the
+inventory app at `https://gazishoaib33.github.io/unique-traders/`. For that
+link to work, GitHub Pages must be enabled for the `unique-traders` repo
+(Settings → Pages → Deploy from branch → `main` / root). The public site
+itself has no login and stores nothing.
 
 ## Features
 
