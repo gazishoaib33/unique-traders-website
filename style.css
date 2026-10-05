@@ -519,6 +519,13 @@ body.nav-open .menu-bars::after {
 .category-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   counter-reset: category;
+  /* Each card draws its own 1px outline into the 1px gap (see
+     .category-card), instead of the grid's grey background showing through
+     the gaps — otherwise an empty cell in the last row (e.g. 6 cards in 4
+     columns, or an odd number left after searching) shows as a grey block. */
+  background: transparent;
+  border: 0;
+  padding: 1px;
 }
 
 .product-grid {
@@ -537,6 +544,7 @@ body.nav-open .menu-bars::after {
 
 .category-card {
   counter-increment: category;
+  outline: 1px solid var(--border);
 }
 
 .category-card::before {
@@ -1218,7 +1226,8 @@ form select:focus {
     position: absolute;
     right: 1.5rem;
     left: 1.5rem;
-    top: 74px;
+    /* Just below the header's bottom border, whatever the header's height. */
+    top: calc(100% + 1px);
     background: #111827;
     padding: 1.25rem 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
