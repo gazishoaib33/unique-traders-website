@@ -61,7 +61,11 @@ const enableScrollReveal = () => {
         }
       });
     },
-    { threshold: 0.2 }
+    // Reveal as soon as the top of an element is a little way into the
+    // viewport. (A 20% threshold never fires for sections taller than ~5
+    // screens — e.g. the product catalogue on a phone — so they stayed
+    // invisible.)
+    { threshold: 0, rootMargin: '0px 0px -10% 0px' }
   );
 
   targets.forEach((element) => observer.observe(element));

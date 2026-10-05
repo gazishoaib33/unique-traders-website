@@ -1258,3 +1258,254 @@ form select:focus {
     grid-template-columns: 1fr;
   }
 }
+
+/* -------------------- Admin / Staff login link -------------------- */
+
+.navbar a.nav-login {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  padding: 0.1rem 0.65rem;
+  margin: -0.2rem 0;
+  font-size: 0.9rem;
+}
+
+/* Tablets / small laptops: tighter spacing so all six links fit on one line. */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .navbar {
+    gap: 1.1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .navbar {
+    gap: 0.8rem;
+  }
+
+  .navbar a.nav-login .nav-en {
+    display: none;
+  }
+}
+
+.navbar a.nav-login::after {
+  display: none;
+}
+
+.navbar a.nav-login:hover {
+  border-color: var(--primary);
+}
+
+/* -------------------- Public product catalogue (product.html) -------------------- */
+
+.product-hero__en {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+.catalog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.catalog-toolbar input,
+.catalog-toolbar select {
+  flex: 1 1 260px;
+  /* Let the dropdown shrink below its longest option on small phones. */
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: inherit;
+  font: inherit;
+  border-radius: 6px;
+}
+
+.catalog-count {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
+}
+
+.catalog-card__image {
+  aspect-ratio: 4 / 3;
+  background: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.catalog-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.catalog-card__placeholder {
+  font-size: 2.6rem;
+  color: var(--muted);
+  opacity: 0.45;
+}
+
+.catalog-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem 1.15rem;
+  flex: 1;
+}
+
+.catalog-card__body h3 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.catalog-card__body {
+  overflow-wrap: anywhere;
+}
+
+.catalog-card__category,
+.catalog-card__code {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.catalog-card__size {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.catalog-card__variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.catalog-card__variants span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.catalog-card__variant {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.catalog-card__variant select {
+  min-height: 40px;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: inherit;
+  font: inherit;
+  border-radius: 6px;
+}
+
+.catalog-card__ask {
+  margin-top: auto;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.catalog-card__body .catalog-card__ask {
+  margin-top: 0.75rem;
+}
+
+.catalog-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 1px dashed var(--border);
+}
+
+.catalog-empty p {
+  margin-bottom: 1rem;
+}
+
+.catalog-more {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.catalog-help {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+  padding: 1.5rem;
+  background: var(--bg-alt);
+  border-left: 4px solid var(--primary);
+}
+
+.catalog-help h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.catalog-help__en {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .navbar a.nav-login {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 0.25rem;
+    padding: 0.55rem 0.9rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .catalog-card__body {
+    padding: 0.75rem;
+  }
+
+  /* On phones the "which side?" dropdown already lists the variants. */
+  .catalog-card__variants {
+    display: none;
+  }
+
+  .catalog-card__body h3 {
+    font-size: 0.95rem;
+  }
+
+  .catalog-help .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 359px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+}
